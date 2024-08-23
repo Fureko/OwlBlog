@@ -1,0 +1,76 @@
+/* Styles de base */
+body {
+    background-color: black;
+    color: #00c0ff; /* Bleu néon */
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 0.5em;
+}
+
+/* Styles du header */
+header {
+    background-color: #111;
+    padding: 1em;
+    text-align: center;
+    border-bottom: 1px solid #00c0ff;
+}
+
+/* Styles du main */
+main {
+    padding: 1em;
+}
+
+article {
+    margin-bottom: 2em;
+    border: 1px solid #00c0ff;
+    border-radius: 5px;
+    background-color: #111;
+}
+
+/* Style de l'en-tête de l'article */
+.article-header {
+    padding: 0.5em;
+    cursor: pointer;
+    border-bottom: 1px solid #00c0ff;
+    font-size: 20px
+}
+
+.article-header h2 {
+    animation: none; /* Désactive l'animation clignotante pour les titres des articles */
+}
+
+/* Contenu de l'article caché par défaut */
+.content {
+    display: none;
+    padding: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00c0ff;
+    white-space: pre-wrap; /* Pour afficher correctement le contenu Markdown */
+}
+
+/* Styles du footer */
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 1em;
+    border-top: 1px solid #00c0ff;
+}
+
+/* Animation texte clignotant pour le titre principal */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+header h1 {
+    animation: blink 1s step-end infinite;
+}
